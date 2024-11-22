@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrollable Minecraft Themed Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #001f3f;
+            color: white;
+        }
+
+        .minecraft-character {
+            position: fixed;
+            top: -300px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            animation: dropIn 2s ease forwards;
+            z-index: 10;
+        }
+
+        @keyframes dropIn {
+            0% {
+                top: -300px;
+            }
+            100% {
+                top: 50px;
+            }
+        }
+
+        .container {
+            display: none; /* Hidden until character drops */
+            animation: fadeIn 2s ease forwards;
+            padding: 20px 0;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .section {
+            text-align: center;
+            padding: 80px 20px;
+            color: white;
+            background: #001a35;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .section img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .section img:hover {
+            transform: rotate(10deg);
+        }
+
+        .section h2 {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #ffdd57;
+        }
+
+        .section p {
+            font-size: 16px;
+            color: #ddd;
+            margin-top: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #aaa;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Minecraft Character -->
+    <img src="https://www.pngfind.com/pngs/m/46-466252_report-abuse-minecraft-character-transparent-hd-png-download.png" alt="Minecraft Character" class="minecraft-character">
+
+    <!-- Content Container -->
+    <div class="container">
+        <div class="section">
+            <img src="https://in.pinterest.com/pin/parked-domain-name-on-hostinger-dns-system--966162926285506564/" alt="Minecraft Scene 1">
+            <h2>Adventure Awaits</h2>
+            <p>Explore vast landscapes filled with danger, treasure, and mystery!</p>
+        </div>
+        <div class="section">
+            <img src="https://via.placeholder.com/300x200.png?text=Placeholder+Image+2" alt="Minecraft Scene 2">
+            <h2>Create and Build</h2>
+            <p>Unleash your creativity and construct epic worlds block by block.</p>
+        </div>
+        <div class="section">
+            <img src="https://via.placeholder.com/300x200.png?text=Placeholder+Image+3" alt="Minecraft Scene 3">
+            <h2>Survive Together</h2>
+            <p>Team up with friends to conquer challenges and build a thriving community.</p>
+        </div>
+    </div>
+
+    <footer>&copy; 2024 Minecraft Themed Website</footer>
+
+    <script>
+        // Show container after the Minecraft character animation
+        const minecraftCharacter = document.querySelector('.minecraft-character');
+        const container = document.querySelector('.container');
+
+        minecraftCharacter.addEventListener('animationend', () => {
+            container.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
