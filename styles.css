@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    background-color: #001a35; /* Dark Navy Blue Background */
+}
+
+.container {
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 20px;
+    margin: 20px 0;
+    background: rgba(0, 26, 53, 0.7); /* Semi-transparent background */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.section img {
+    width: 250px;
+    height: auto;
+    border-radius: 20px;
+    margin-right: 20px;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.section-content {
+    max-width: 600px;
+}
+
+.section h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #ffdd57;
+}
+
+.section p {
+    margin: 10px 0 0;
+    font-size: 16px;
+    color: #ddd;
+    line-height: 1.5;
+}
+
+.arrow-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #ffdd57;
+    color: #001a35;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 30px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.arrow-button:hover {
+    background-color: #ffbb33;
+    transform: scale(1.1);
+}
+
+.arrow-button::after {
+    content: ' →'; /* Unicode for right arrow */
+    font-size: 18px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #aaa;
+    font-size: 14px;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section img {
+        margin: 0 0 20px 0;
+        width: 80%;
+    }
+
+    .section-content {
+        max-width: 100%;
+    }
+
+    .section h2 {
+        font-size: 20px;
+    }
+
+    .section p {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section h2 {
+        font-size: 18px;
+    }
+
+    .section p {
+        font-size: 12px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
