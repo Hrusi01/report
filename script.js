@@ -1,4 +1,4 @@
-// JavaScript for image rotation on mouse hover based on mouse position
+
 const images = document.querySelectorAll('.rotatable-image');
 
 images.forEach(image => {
