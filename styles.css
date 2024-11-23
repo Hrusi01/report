@@ -4,6 +4,18 @@ body {
     color: white;
     background-color: #001a35; /* Dark Navy Blue Background */
 }
+/* Header Styling */
+header {
+    width: 100%;
+    text-align: center;
+}
+
+.header-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 
 .container {
     padding: 20px;
