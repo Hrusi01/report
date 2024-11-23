@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Interactive Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            background-color: #001a35; /* Dark Navy Blue Background */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .block {
+            background-color: #003366;
+            border-radius: 10px;
+            padding: 20px;
+            width: 45%;
+            color: white;
+            text-align: center;
+            position: relative;
+            box-sizing: border-box;
+        }
+
+        .block img {
+            width: 100%;
+            max-height: 200px; /* Restrict height */
+            object-fit: contain; /* Ensures the image scales within bounds while maintaining its aspect ratio */
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .block img:hover {
+            transform: rotate(10deg) scale(1.05); /* Adds rotation and slight zoom on hover */
+        }
+
+        .block h2 {
+            font-size: 24px;
+            color: #ffdd57;
+            margin: 20px 0 10px;
+        }
+
+        .block p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ffdd57;
+            border: none;
+            border-radius: 5px;
+            color: #001a35;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #ffc107;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            .block {
+                width: 100%; /* Blocks take full width on smaller screens */
+            }
+
+            .block img {
+                max-height: 150px; /* Adjust height for smaller screens */
+            }
+
+            .block h2 {
+                font-size: 20px;
+            }
+
+            .block p {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .back-button {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="block block-left">
+            <img src="images/techtalk.jpg" alt="Craft and Code">
+            <h2>STRIVER</h2>
+            <p> Striver refers to Raj Vikramaditya, a prominent software engineer, competitive programmer, 
+                and educator in the field of programming and data structures. He is best known for his online
+                 content that helps 
+                students and professionals excel in coding interviews and competitive programming.</p>
+        </div>
+        <div class="block block-right">
+            <img src="images/pitch.jpg" alt="Pitch and Win">
+            <h2>Pitch and Win</h2>
+            <p>Unleash your creativity in Pitch and Win. Showcase groundbreaking ideas, pitch to experts, and turn your vision into reality. Creativity knows no bounds!</p>
+        </div>
+    </div>
+    <button class="back-button" onclick="goBack()">Go Back</button>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
