@@ -14,13 +14,15 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             text-align: center;
             flex-direction: column;
+            padding: 20px;
         }
 
         img {
-            max-width: 40%;
+            max-width: 40%; /* Reduce image width to 50% of the container */
+            height: auto; /* Maintain aspect ratio */
             border-radius: 10px;
             margin-bottom: 20px;
         }
@@ -30,13 +32,13 @@
         }
 
         h1 {
-            font-size: 36px;
+            font-size: 32px;
             margin-bottom: 10px;
             color: #ffdd57;
         }
 
         p {
-            font-size: 18px;
+            font-size: 16px;
             line-height: 1.6;
         }
 
@@ -54,6 +56,45 @@
 
         .back-button:hover {
             background-color: #ffc107;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            img {
+                max-width: 70%; /* Reduce image size further on medium screens */
+            }
+
+            h1 {
+                font-size: 28px; /* Reduce heading size */
+            }
+
+            p {
+                font-size: 14px; /* Smaller font for readability */
+            }
+
+            .back-button {
+                font-size: 14px; /* Adjust button size */
+                padding: 8px 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            img {
+                max-width: 90%; /* Even smaller for very small screens */
+            }
+
+            h1 {
+                font-size: 24px; /* Further reduce heading size */
+            }
+
+            p {
+                font-size: 12px; /* Smaller font for mobile */
+            }
+
+            .back-button {
+                font-size: 12px; /* Compact button size */
+                padding: 6px 12px;
+            }
         }
     </style>
 </head>
