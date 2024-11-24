@@ -1,9 +1,9 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ROBO RACE</title>
+    <title>Responsive Robo Race Website</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <style>
         body {
@@ -14,13 +14,15 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             text-align: center;
             flex-direction: column;
+            padding: 20px;
         }
 
         img {
-            max-width: 40%;
+            max-width: 40%; /* Reduce image width to 50% of the container */
+            height: auto; /* Maintain aspect ratio */
             border-radius: 10px;
             margin-bottom: 20px;
         }
@@ -30,13 +32,13 @@
         }
 
         h1 {
-            font-size: 36px;
+            font-size: 32px;
             margin-bottom: 10px;
             color: #ffdd57;
         }
 
         p {
-            font-size: 18px;
+            font-size: 16px;
             line-height: 1.6;
         }
 
@@ -55,29 +57,63 @@
         .back-button:hover {
             background-color: #ffc107;
         }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            img {
+                max-width: 70%; /* Reduce image size further on medium screens */
+            }
+
+            h1 {
+                font-size: 28px; /* Reduce heading size */
+            }
+
+            p {
+                font-size: 14px; /* Smaller font for readability */
+            }
+
+            .back-button {
+                font-size: 14px; /* Adjust button size */
+                padding: 8px 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            img {
+                max-width: 90%; /* Even smaller for very small screens */
+            }
+
+            h1 {
+                font-size: 24px; /* Further reduce heading size */
+            }
+
+            p {
+                font-size: 12px; /* Smaller font for mobile */
+            }
+
+            .back-button {
+                font-size: 12px; /* Compact button size */
+                padding: 6px 12px;
+            }
+        }
     </style>
 </head>
 <body>
-    <img src="images/roborace3.png" alt="Placeholder Image">
+    <img src="images/roborace3.png" alt="Robo Race Event Image">
     <div class="content">
         <h1>ROBO RACE</h1>
-        <p>The Robo Race event at D3 Fest is an adrenaline-pumping challenge designed to test speed,
-             precision, and technical ingenuity. This thrilling competition brings together robotics enthusiasts 
-             from across the country to design, build,
-             and race their robots through a demanding obstacle course.</p>
+        <p>The Robo Race event at D3 Fest is an adrenaline-pumping challenge designed to test speed, precision, and technical ingenuity. This thrilling competition brings together robotics enthusiasts from across the country to design, build, and race their robots through a demanding obstacle course.</p>
 
-             <p>Speed and Precision: Participants must construct robots capable of navigating a track filled with twists, turns, and hurdles, all while competing against the clock.
-                Innovative Engineering: Showcase your creativity and technical prowess by designing robots that are agile, efficient, and robust enough to overcome challenges.
-                Competitive Spirit: Teams battle head-to-head, pushing their robots to the limit, creating an electrifying atmosphere of competition and camaraderie.
-                Learning Opportunity: Engage with cutting-edge robotics concepts such as motion control, sensors, and optimization, and gain practical experience in real-world problem-solving.</p>
+        <p><strong>Speed and Precision:</strong> Participants must construct robots capable of navigating a track filled with twists, turns, and hurdles, all while competing against the clock.</p>
+        <p><strong>Innovative Engineering:</strong> Showcase your creativity and technical prowess by designing robots that are agile, efficient, and robust enough to overcome challenges.</p>
+        <p><strong>Competitive Spirit:</strong> Teams battle head-to-head, pushing their robots to the limit, creating an electrifying atmosphere of competition and camaraderie.</p>
+        <p><strong>Learning Opportunity:</strong> Engage with cutting-edge robotics concepts such as motion control, sensors, and optimization, and gain practical experience in real-world problem-solving.</p>
 
-                <P>
-                    Why Participate?
-Unleash your engineering skills and tackle an exciting robotics challenge.
-Compete with like-minded innovators and tech enthusiasts.
-Experience the thrill of robotics in action and win recognition and prizes.
-Robo Race is more than a competition—it’s a showcase of talent, determination, and technological brilliance. Gear up to design, race, and conquer at D3 Fest, IIIT Bhubaneswar!
-                </P>
+        <p><strong>Why Participate?</strong><br>
+        Unleash your engineering skills and tackle an exciting robotics challenge.<br>
+        Compete with like-minded innovators and tech enthusiasts.<br>
+        Experience the thrill of robotics in action and win recognition and prizes.<br>
+        Robo Race is more than a competition—it’s a showcase of talent, determination, and technological brilliance. Gear up to design, race, and conquer at D3 Fest, IIIT Bhubaneswar!</p>
         <button class="back-button" onclick="goBack()">Go Back</button>
     </div>
 
