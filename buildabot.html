@@ -1,0 +1,85 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            background-color: #001a35; /* Dark Navy Blue Background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            flex-direction: column;
+        }
+
+        img {
+            max-width: 40%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            max-width: 600px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: #ffdd57;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .back-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ffdd57;
+            border: none;
+            border-radius: 5px;
+            color: #001a35;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #ffc107;
+        }
+    </style>
+</head>
+<body>
+    <img src="images/buildabot.png" alt="Placeholder Image">
+    <div class="content">
+        <h1>BUILD A BOT</h1>
+        <p>The Build a Bot event at D3 Fest is a thrilling challenge that invites tech 
+            enthusiasts and budding engineers to unleash their creativity and technical skills.
+             Participants are tasked with designing, building, and showcasing their own robots in a dynamic and 
+             competitive environment.
+             </p>
+             <p>Key Highlights:
+                Innovative Robot Design: Participants create functional robots tailored to specific tasks or challenges.
+                Hands-On Learning: Explore the principles of robotics, including mechanics, sensors, and programming.
+                Collaboration & Competition: Work in teams or individually to push the boundaries of innovation and compete with peers.
+                Showcase Your Talent: Demonstrate your skills to an audience of tech experts and fellow enthusiasts.
+                Whether you're a beginner or an experienced builder, Build a Bot is your chance to experiment, innovate, and bring your robotic vision to life at D3 Fest!
+            </p>
+        <button class="back-button" onclick="goBack()">Go Back</button>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
